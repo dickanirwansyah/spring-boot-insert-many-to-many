@@ -1,4 +1,12 @@
 package com.app.demomanytomany.entity;
 
-public class Category {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+//@Entity
+//@Table(name = "category")
+public class Category implements Serializable{
+
+
 }

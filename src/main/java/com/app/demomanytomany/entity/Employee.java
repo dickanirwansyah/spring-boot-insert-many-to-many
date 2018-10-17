@@ -16,10 +16,10 @@ public class Employee implements Serializable {
     private String name;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(name = "employee_skill",
-            joinColumns = {@JoinColumn(name = "es_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "employee_id")})
+    @JoinTable(name = "employee_skill", joinColumns = {@JoinColumn(name = "employee_id")},
+            inverseJoinColumns = {@JoinColumn(name = "skill_id")})
     private Set<SkillEmployee> skillEmployees = new HashSet<>();
+
 
     public int getEmployeeId() {
         return employeeId;
